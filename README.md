@@ -1,5 +1,6 @@
 # Momonova.github.io
 “Own Your Style. Stand Out. Momonova.” Premium streetwear for those who make bold moves
+<img width="2000" height="2000" alt="image" src="https://github.com/user-attachments/assets/146b7111-02ee-44e6-bd82-10167878bfd9" />
 <img width="1024" height="1024" alt="768DCFFB-CA94-4760-AD10-5E9D03DFB17A" src="https://github.com/user-attachments/assets/d878e394-324a-4289-b2a4-e38710070dac" />
 <img width="1024" height="1024" alt="AEF60EE5-D847-42F0-A3A9-3C53E1EC2508" src="https://github.com/user-attachments/assets/209abf40-1203-4139-a055-4b05e326f1de" />
 <img width="1024" height="1024" alt="60DB99D6-E340-41D1-BABB-5D716A20C1D9" src="https://github.com/user-attachments/assets/ed89dc3c-87de-43fe-a4e8-ef0cf728a7dc" />
