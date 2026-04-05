@@ -6,117 +6,62 @@
 <title>Momonova</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
+body {
   font-family: Arial, sans-serif;
-  background:#000;
-  color:#fff;
+  margin: 0;
+  background: #f5f5f5;
+  text-align: center;
 }
 
-header{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 40px;
-  border-bottom:1px solid #222;
+header {
+  background: black;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-header h1{letter-spacing:4px;}
-
-nav a{
-  color:white;
-  margin-left:20px;
-  text-decoration:none;
+.container {
+  padding: 20px;
 }
 
-.hero{
-  height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+.product {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.hero h2{
-  font-size:55px;
+.product img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-.hero p{
-  color:#aaa;
-  margin:10px 0 20px;
+button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.btn{
-  padding:12px 25px;
-  background:white;
-  color:black;
-  border:none;
-  cursor:pointer;
+button:hover {
+  background: red;
 }
 
-.products{
-  display:flex;
-  gap:30px;
-  padding:60px 20px;
-  justify-content:center;
-  flex-wrap:wrap;
+a {
+  text-decoration: none;
 }
 
-.card{
-  background:#111;
-  padding:20px;
-  width:220px;
-  border-radius:12px;
-  text-align:center;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-}
-
-.card img{
-  width:100%;
-  border-radius:10px;
-}
-
-.cart-btn{
-  position:fixed;
-  top:20px;
-  right:20px;
-  background:white;
-  color:black;
-  padding:10px 15px;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-.cart{
-  position:fixed;
-  right:-300px;
-  top:0;
-  width:300px;
-  height:100%;
-  background:#111;
-  padding:20px;
-  transition:0.4s;
-}
-
-.cart.active{
-  right:0;
-}
-
-.instagram{
-  text-align:center;
-  padding:60px 20px;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  border-top:1px solid #222;
-  color:#777;
+.footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: black;
+  color: white;
 }
 </style>
 </head>
@@ -124,81 +69,46 @@ footer{
 <body>
 
 <header>
-<h1>MOMONOVA</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#shop">Shop</a>
-<a href="#ig">Instagram</a>
-</nav>
+MOMONOVA
 </header>
 
-<div class="cart-btn" onclick="toggleCart()">Cart (<span id="count">0</span>)</div>
+<div class="container">
 
-<div class="cart" id="cart">
-<h2>Your Cart</h2>
-<ul id="cart-items"></ul>
-<br>
-<button class="btn" onclick="checkout()">Checkout</button>
+<!-- PRODUCT 1 -->
+<div class="product">
+  <h2>Momonova Classic Long Sleeve</h2>
+  <img src="product1-front.png">
+  <img src="product1-back.png">
+
+  <p><strong>RM49.99</strong></p>
+  <p>Sizes: L, XL</p>
+
+  <a href="https://wa.me/601121812534?text=I want to buy Momonova Classic Long Sleeve (RM49.99)">
+    <button>Buy Now</button>
+  </a>
 </div>
 
-<section class="hero">
-<h2>Own Your Style</h2>
-<p>Premium Streetwear Collection</p>
-<button class="btn" onclick="scrollToShop()">Shop Now</button>
-</section>
+<!-- PRODUCT 2 -->
+<div class="product">
+  <h2>Momonova Blue Edition</h2>
+  <img src="product2.png">
 
-<section class="products" id="shop">
+  <p><strong>RM49.99</strong></p>
+  <p>Sizes: L, XL</p>
 
-<div class="card">
-<img src="https://via.placeholder.com/200">
-<h3>Momonova Black Tee</h3>
-<p>RM49.99</p>
-<button onclick="addToCart('Black Tee')">Add to Cart</button>
+  <a href="https://wa.me/601121812534?text=I want to buy Momonova Blue Edition (RM49.99)">
+    <button>Buy Now</button>
+  </a>
 </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/200">
-<h3>Momonova Tracksuit</h3>
-<p>RM89.99</p>
-<button onclick="addToCart('Tracksuit')">Add to Cart</button>
 </div>
 
-</section>
-
-<section class="instagram" id="ig">
-<h2>Follow Us</h2>
-<p>@momonova</p>
-</section>
-
-<footer>
-©️ 2026 Momonova. All rights reserved.
-</footer>
-
-<script>
-let cart=[];
-
-function scrollToShop(){
- document.getElementById("shop").scrollIntoView({behavior:'smooth'});
-}
-
-function addToCart(item){
- cart.push(item);
- document.getElementById("count").innerText=cart.length;
-
- let li=document.createElement("li");
- li.innerText=item;
- document.getElementById("cart-items").appendChild(li);
-}
-
-function toggleCart(){
- document.getElementById("cart").classList.toggle("active");
-}
-
-function checkout(){
- let message="Order:%0A"+cart.join("%0A");
- window.open("https://wa.me/60123456789?text="+message);
-}
-</script>
+<div class="footer">
+  <p>Follow us on Instagram</p>
+  <a href="https://instagram.com/momonova.wears" style="color:white;">
+    @momonova.wears
+  </a>
+</div>
 
 </body>
 </html>
