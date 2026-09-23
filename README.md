@@ -10,6 +10,4 @@
 <img width="1024" height="1024" alt="D37D0EAD-3B61-4DA6-BF3A-B8346670EF59" src="https://github.com/user-attachments/assets/b2174e21-e78b-4ba2-8e57-d7aa1c9c138f" />
 <img width="1024" height="1024" alt="DFC3F317-DF30-41CF-BE92-FE811E5BB093" src="https://github.com/user-attachments/assets/df9d853d-3180-4346-9eca-6536f9f3fbef" />
 <p><strong>RM49.99</strong></p><p>Sizes: L, XL</p>
-<a href="https://wa.me/601121812534">  <button>Buy on WhatsApp</button> <\a>
-<a href="https://instagram.com/momonova.wears">Follow us on Instagram</a>
-<a href="https://wa.me/601121812534?text=I want to buy Momonova T-Shirt">  <button>Add to Cart / Buy Now</button></a>
+href="https://instagram.com/momonova.wears">Follow us on Instagram</a>
